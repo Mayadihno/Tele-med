@@ -1,0 +1,22 @@
+ <div className="active">
+        <div className="flex justify-around border-b-2 800px:text-[16px] text-[13px]">
+          <div
+            className={`${
+              active === 1
+                ? "bg-[#901E78] px-4 rounded-[6px] py-2 text-white mb-1"
+                : " bg-slate-300 px-4 py-2 rounded-[6px] mb-2"
+            }`}
+          >
+            <button onClick={() => setActive(1)}>Available items</button>
+          </div>
+          <div
+            className={`${
+              active === 2
+                ? "bg-[#901E78] px-4 rounded-[6px] py-2 text-white mb-1"
+                : " bg-slate-300 px-4 py-2 rounded-[6px] mb-2"
+            }`}
+          >
+            <button onClick={() => setActive(2)}>Sold Items</button>
+          </div>
+        </div>
+      </div>
