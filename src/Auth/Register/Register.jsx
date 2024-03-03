@@ -81,7 +81,7 @@ const Register = ({ setActive }) => {
                 name="fullName"
                 id="fullName"
                 required
-                placeholder="yourEmail@gmail.com"
+                placeholder="John Doe"
                 autoComplete="fullName"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
@@ -123,7 +123,7 @@ const Register = ({ setActive }) => {
                 name="phone"
                 id="phone"
                 required
-                placeholder="yourEmail@gmail.com"
+                placeholder="+0123456789"
                 autoComplete="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -178,7 +178,7 @@ const Register = ({ setActive }) => {
                 name="cpassword"
                 id="cpassword"
                 required
-                placeholder="cpassword"
+                placeholder="confirm password"
                 autoComplete="current-password"
                 value={Cpassword}
                 onChange={(e) => setCPassword(e.target.value)}

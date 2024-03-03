@@ -6,7 +6,7 @@ import image3 from "../../assets/nurse3.svg";
 const Consult = () => {
   return (
     <React.Fragment>
-      <div className="bg-[#1D1B20] 800px:h-[100vh] h-[60vh]">
+      <div className="bg-[#1D1B20] 800px:h-[100vh] h-[85vh]">
         <div className={`${styles.section}`}>
           <div className="text-center pt-20">
             <h3 className=" text-[#DCFFB5] text-[25px] tracking-normal 800px:w-[50%] w-full mx-auto">

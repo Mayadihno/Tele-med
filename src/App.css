@@ -27,10 +27,10 @@
 }
 @media (max-width: 576px) {
     .testimony {
-        height: 64vh;
+        height: 80vh;
     }
     .smile{
-        height: 85vh;
+        height: 100vh;
     }
 }
 
