@@ -6,6 +6,7 @@ import "@wojtekmaj/react-timerange-picker/dist/TimeRangePicker.css";
 import "react-clock/dist/Clock.css";
 import TimeRangePicker from "@wojtekmaj/react-timerange-picker";
 import "react-calendar/dist/Calendar.css";
+import "react-clock/dist/Clock.css";
 import Calendar from "react-calendar";
 import { BsCalendarDate } from "react-icons/bs";
 import { doc, setDoc } from "firebase/firestore";
@@ -118,7 +119,7 @@ const Book = () => {
                         name="phone"
                         id="phone"
                         required
-                        placeholder="yourEmail@gmail.com"
+                        placeholder="+0123456789"
                         autoComplete="phone"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
@@ -186,6 +187,7 @@ const Book = () => {
                     onChange={onChange}
                     value={value}
                     className={"w-full"}
+                    disableClock={true}
                   />
                 </div>
                 <div className="calender mt-4">

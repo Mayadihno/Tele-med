@@ -3,10 +3,16 @@ import styles from "../../style/styles";
 import image1 from "../../assets/nurse1.svg";
 import image2 from "../../assets/nurse2.svg";
 import image3 from "../../assets/nurse3.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { images } from "../Data/data";
 const Consult = () => {
   return (
     <React.Fragment>
-      <div className="bg-[#1D1B20] 800px:h-[100vh] h-[75vh]">
+      <div className="bg-[#1D1B20] 800px:h-[100vh] h-min">
         <div className={`${styles.section}`}>
           <div className="text-center pt-20">
             <h3 className=" text-[#DCFFB5] text-[25px] tracking-normal 800px:w-[50%] w-full mx-auto">
@@ -35,12 +41,56 @@ const Consult = () => {
             </div>
             <img src={image3} className="w-[300px] mt-[98px]" alt="" />
           </div>
-          <div className="800px:hidden 800px:items-center w-full mx-auto grid grid-cols-3">
-            <img src={image1} className="w-[350px] mt-[51px]" alt="" />
+          <div className="800px:hidden 800px:items-center w-full mx-auto">
+            <div className="mt-3">
+              <Swiper
+                modules={[Autoplay]}
+                // slidesPerView={3}
+                pagination={{ clickable: true }}
+                loop={true}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  // mobile landscape
+                  478: {
+                    slidesPerView: 1,
+                    // spaceBetween: 10,
+                  },
+                  // When window width is <= 640px (mobile screens)
+                  640: {
+                    slidesPerView: 1,
+                  },
+                  // When window width is <= 768px (tablet screens)
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  // When window width is <= 1024px (desktop screens)
+                  1024: {
+                    slidesPerView: 3,
+                  },
+                }}
+              >
+                {images.map((item) => (
+                  <>
+                    <SwiperSlide key={item.id}>
+                      <div className="" key={item.id}>
+                        <img
+                          src={item.image}
+                          className=" !w-[350x] h-[350px] object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  </>
+                ))}
+              </Swiper>
+            </div>
+            {/* <img src={image1} className="w-[350px] mt-[51px]" alt="" />
             <div className="">
               <img src={image2} className="w-[350px] mt-2" alt="" />
             </div>
-            <img src={image3} className="w-[350px] mt-[52px]" alt="" />
+            <img src={image3} className="w-[350px] mt-[52px]" alt="" /> */}
           </div>
         </div>
       </div>

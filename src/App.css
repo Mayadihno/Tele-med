@@ -25,6 +25,9 @@
     position: relative;
 
 }
+.react-clock {
+    display: none;
+}
 @media (max-width: 576px) {
     .testimony {
         height: 80vh;

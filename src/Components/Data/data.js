@@ -9,6 +9,9 @@ import { FaStar } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
+import image7 from "../../assets/nurse1.svg";
+import image8 from "../../assets/nurse2.svg";
+import image9 from "../../assets/nurse3.svg";
 
 export const icons = [
   {
@@ -165,5 +168,20 @@ export const genderData = [
     id: 3,
     text: "Other",
     val: "other",
+  },
+];
+
+export const images = [
+  {
+    id: 1,
+    image: image7,
+  },
+  {
+    id: 2,
+    image: image8,
+  },
+  {
+    id: 3,
+    image: image9,
   },
 ];

@@ -52,7 +52,7 @@ const Testimony = () => {
                 {testimony.map((item) => (
                   <>
                     <SwiperSlide key={item.id}>
-                      <div className="flex flex-col w-[300px]">
+                      <div className="flex flex-col w-[300px]" key={item.id}>
                         <div className=" w-full object-cover">
                           <img src={item.image} className="w-full" alt="" />
                         </div>
